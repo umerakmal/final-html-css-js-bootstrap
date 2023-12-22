@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:root {
+    --blue : #6689ff;
+}
+header {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+}
+.hover a:hover {
+    border-bottom: 3px solid var(--blue);
+    transition: all .2s ;
+}
+.active {
+    border-bottom: 3px solid var(--blue);
+}
+.bg-img {
+    background-image: url("images/BANNER.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 700px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+.i-size {
+    font-size: 5rem;
+}
+.bg-blu {
+    background-color: var(--blue);
+}
+.bg-trans {
+    border: 1px solid white;
+}
+.btn-design {
+    border-radius: 0;
+    text-transform: uppercase;
+    color: white;
+    padding: 15px 35px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 150ms ease-in-out;
+    font-weight: 500;
+}
+.btn-design::after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 100%;
+      background: black;
+      z-index: -1;
+      transition: width 150ms ease-in-out;
+}
+    
+.btn-design:hover {
+    color: #fff;
+}
+.btn-design:hover::after {
+    width: 110%;
+}
+.btn-design2 {
+    background-color: rgb(106, 104, 104);
+}
+.btn-design2:hover, .btn-design3:hover {
+    background-color: black;
+}
+.btn-design3 {
+    background-color: var(--blue);
+}
+.bd-bl {
+    border: 1px solid black;
+    color: black;
+}
+
+.hr {
+    border-bottom: 2px solid gray;
+}
+.shadow {
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+}
+.image img {
+    width: 70%;
+    height: 100%;
+}
+.dev-bg {
+    background-image: url("images/devbg.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 300px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+.size {
+    font-size: 7rem;
+}
+
+.p-r{
+    position: relative;
+    overflow: hidden;
+}
+.img-over{
+    position: absolute;
+    background-color: white;
+    inset: 0;
+    bottom: 100%;
+    right: 100%;
+    transition: all .9s ;
+    
+}
+
+.over-content {
+    transition-delay: .6s;
+    opacity: 0;
+}
+.p-r:hover .img-over{
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+}
+.p-r:hover .over-content {
+    opacity: 1;
+}
+.scale-img img {
+    transition: all .3s;
+    width: 90%;
+}
+.scale-img:hover img {
+    outline: gray solid 1px;
+    outline-offset: -15px;
+    transform: scale(0.9);
+}
+.bg-clr{
+    background-color: #F3F3F3;
+}
+.card-btn{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 5px;
+    gap: 5px;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+.card-data{
+    width: 22%;
+    background-color: #F3F3F3;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.opa {
+    opacity: 0.05;
+}
+input{
+    width: 100%;
+    margin: 0px auto;
+    height: 100px;
+    border-radius: 16px 16px 0 0 ;
+    border: none;
+    outline: none;
+    background-color: blue;
+}
+.w-80{
+    width: 70%;
+    margin: 0 auto;
+}
+::placeholder{
+    color: white;
+}
+.abc p{
+    font-size: 20px;
+}
+.icon-hover:hover .card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+    transition: all .2s;
+}
+.icon-hover:hover i{
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    transition: all .2s;
+}
+@media screen and (max-width: 576px){
+    .b-res {
+        border-bottom: 1px solid gray;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .abc p{
+        font-size: 16px;
+        /* display: none; */
+    }
+}
